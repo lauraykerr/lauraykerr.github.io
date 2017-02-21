@@ -1,44 +1,85 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-        padding: 0;
-        margin: 0;
-        height: 100%;
-    }
+	background-color: #000026;
+	font-family: 'Karla', sans-serif;
 
-    html,
-    #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-    }
+	padding: 30px 40px;
 
-.buttons {
-    position: absolute;
-    top: 90px;
-    left: 10px;
-    margin-right: 40px;
-    z-index: 1;
+
 }
 
-button {
-    background-color: #eee; 
-    border: 2px solid #aaa;
-    color: black;
-    padding: 8px 18px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 3px;
-    text-transform: uppercase;
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+h1 {
+	color: #333;
+	text-align: center;
+	background-color: white;
+	width: 40%;
+	margin: 0 auto;
+	border: 2px solid black;
+	padding: 2px;
 }
 
-button:hover {
-    background-color: #666;
-    border: 2px solid #444;
-    color: white;
+.description {
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	margin-top: 40px;
 }
 
-button:focus {
-  outline: none;
+.description:hover {
+	cursor: pointer;
 }
+
+.images {
+	display: none;
+}
+
+.bag {
+	width: 25%;
+	float: left;
+	padding-left: 10%;
+	opacity: .2;
+}
+
+.notebook {
+	width: 30%;
+	float: left;
+	padding-top: 75px;
+	padding-left: 10%;
+	opacity: .2;
+}
+
+.wallet {
+	width: 35%;
+	float: left;
+	padding-top: 100px;
+	padding-left: 10%;
+	opacity: .2;
+}
+
+.stories {
+	color: black;
+	background-color: white;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding: 15px 20px;
+	border: 2px solid black;
+	display: none;
+	line-height: 125%;
+	font-size: 17px;
+	opacity: .7;
+}
+
