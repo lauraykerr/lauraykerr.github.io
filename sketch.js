@@ -20,7 +20,7 @@ $(".notebook").hover(function(){
     $(".notebook").fadeTo("fast", 1)
     $(".bag").fadeTo("fast", .2)
     $(".wallet").fadeTo("fast", .2)
-    $(".stories").delay(500).text("In the stolen bag was a small notebook. Practically, its absence posed a problem; the notebook contained notes that I had taken for a story at a newspaper internship. More than that, though, I missed the notebook because of a dream I had recorded in it, about my late grandmother. It is the only time I can recall waking up in the middle of the night and writing down a dream out of the desire to make it stick. It is strange to think that my dream was out there in San Francisco out of my grasp.");
+    $(".stories").delay(500).text("In the stolen bag was a small notebook. Practically, its absence posed a problem: The notebook contained notes that I had taken for a story due in a few days at a newspaper internship. More than that, though, I missed the notebook because of a dream I had recorded in it, about my late grandmother. It is the only time I can recall waking up in the middle of the night and writing down a dream out of the desire to make it stick. It is strange to think that my dream floated out there in San Francisco, outside of my grasp.");
     $(this).css("-webkit-animation", "none")
   })
 
