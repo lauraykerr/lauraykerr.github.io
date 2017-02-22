@@ -5,7 +5,8 @@
 body {
 	background-color: #000026;
 	font-family: 'Karla', sans-serif;
-	padding: 20px 40px;
+
+	padding: 30px 40px;
 
 
 }
@@ -34,6 +35,7 @@ h1 {
 	font-size: 20px;
 	color: white;
 	margin-top: 40px;
+	line-height: 175%;
 }
 
 .description:hover {
