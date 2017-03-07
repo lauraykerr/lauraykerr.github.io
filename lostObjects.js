@@ -55,7 +55,7 @@ function loadData() {
 
 function displayLostItems() {
 
-	lostThings = ["mind", "way", "voice", "family", "favorite ring", "passion", "fire", "sita", "patience", "keys", "chill", "wallet", "phone", "virginity", "bet", "twitter", "password", "chapstick", "sister", "mind", "fave hoodie", "heart", "blackberry", "toe ring", "diary", "front tooth", "tiddies", "retainer", "faith", "bracelet", "NINTENDOGS", "license", "brother", "appetite", "confidence", "key", "16.8k", "DIPBROW", "abortion money", "umbrella", "eyeglasses", "glow", "fucking ball", "way", "giftcards", "Engine", "fav", "12.7k", "nose ring", "best friend", "passion", "shit"];
+	lostThings = ["mind", "way", "voice", "family", "favorite ring", "passion", "fire", "sita", "patience", "keys", "chill", "wallet", "phone", "virginity", "bet", "twitter", "password", "chapstick", "sister", "mind", "fave hoodie", "heart", "blackberry", "toe ring", "diary", "front tooth", "tiddies", "retainer", "faith", "bracelet", "NINTENDOGS", "license", "brother", "appetite", "confidence", "key", "16.8k", "DIPBROW", "abortion money", "umbrella", "eyeglasses", "glow", "fucking ball", "way", "giftcards", "Engine", "training gloves", "12.7k", "nose ring", "best friend", "passion", "shit"];
 	lostThings2 = ["home", "toy", "earphones", "dad and mom", "mojo", "keys", "wallet", "putter", "girl", "tea", "HEART", "arms", "apple earbuds", "SHIT", "hat", "juice", "way", "halo", "phone", "beats headphones", "Mind", "left breast", "LOGIN", "remote", "sister", "glasses", "bestfriend", "appetite", "soul", "debit card", "sharpener", "retainer"];
 
 			for (j = 0; j < lostThings2.length; j++) {
@@ -90,10 +90,10 @@ function displayLostStories() {
 			if ($(".lost-stories").css("opacity") > 0) {
 				$(".lost-stories").clearQueue();
 				$(".lost-stories").html(tweets[termResults]);
-				$(".lost-stories").fadeTo(1000, 1).delay(3000).fadeTo(3500, 0);
+				$(".lost-stories").fadeTo(1000, 1).delay(3500).fadeTo(3500, 0);
 			} else {	
 				$(".lost-stories").html(tweets[termResults]);
-				$(".lost-stories").fadeTo(1000, 1).delay(3000).fadeTo(3000, 0);
+				$(".lost-stories").fadeTo(1000, 1).delay(3500).fadeTo(3500, 0);
 				}
 			})
 
@@ -110,7 +110,7 @@ function displayLostStories() {
 $(document).click(function() {
 
 	var people = ["dad and mom", "girl", "sister", "bestfriend", "family", "sita", "brother", "best friend"];
-	var things = ["toy", "earphones", "voice", "keys", "wallet", "putter", "arms", "apple earbuds", "giftcards", "Engine", "fav", "12.7k", "nose ring", "hat", "phone", "beats headphones", "left breast", "remote", "key", "umbrella", "eyeglasses", "glow", "fucking ball", "16.8k", "DIPBROW", "abortion money", "glasses", "debit card", "sharpener", "retainer", "favorite ring", "fire", "keys", "wallet", "phone", "twitter", "LOGIN", "password", "chapstick", "fave hoodie", "blackberry", "toe ring", "diary", "front tooth", "tiddies", "bracelet", "NINTENDOGS"];
+	var things = ["toy", "earphones", "voice", "keys", "wallet", "putter", "arms", "apple earbuds", "giftcards", "Engine", "training gloves", "12.7k", "nose ring", "hat", "phone", "beats headphones", "left breast", "remote", "key", "umbrella", "eyeglasses", "glow", "fucking ball", "16.8k", "DIPBROW", "abortion money", "glasses", "debit card", "sharpener", "retainer", "favorite ring", "fire", "keys", "wallet", "phone", "twitter", "LOGIN", "password", "chapstick", "fave hoodie", "blackberry", "toe ring", "diary", "front tooth", "tiddies", "bracelet", "NINTENDOGS"];
 	var mindset = ["mojo", "HEART", "SHIT", "way", "halo", "Mind", "appetite", "shit", "soul", "mind", "passion", "patience", "chill", "heart", "faith", "confidence", "way"];
 	var other = ["home", "virginity", "tea", "juice", "voice", "bet", "license"];
 
