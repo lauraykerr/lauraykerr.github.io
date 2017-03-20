@@ -1,0 +1,84 @@
+body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    html,
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+
+.neighborhoodName {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    margin-right: 40px;
+    z-index: 100;
+}
+
+.buttons {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    margin-right: 40px;
+    z-index: 1;
+}
+
+.button_on {
+  background-color: #666;
+}
+
+.census div {
+  height: 10px;
+  width: 10px;
+  background-color: #56a8ce;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.zillow div {
+  height: 10px;
+  width: 10px;
+  background-color: #cde043;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.pedia div {
+  height: 10px;
+  width: 10px;
+  background-color: #46e2a9;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+button {
+    background-color: #fff; 
+    border: 2px solid #aaa;
+    color: black;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 3px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #666;
+    border: 2px solid #444;
+    color: white;
+}
+
+button:focus {
+  outline: none;
+}

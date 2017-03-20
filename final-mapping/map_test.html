@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo Project : Street View Overlay</title>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+    <script type="text/javascript" src="map_test.js"></script>
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', loadPage);
+    </script></head>
+<body>
+
+
+    <center>
+    <div style="width:960px; text-align:left">
+    
+        <h1>Street View Overlay Demo</h1>
+        <p>This simple demo shows how to display an image overlay over a streetview and sync its movement (approximately) as the street view POV (point of view) changes.</p>
+        <table><tr><td>
+        
+            <div id="mapDiv" style="width:480px; height:480px"></div>
+
+        </td><td>
+        
+            <div id="panFrame" style="position:relative; width:480px; height:480px; overflow:hidden">
+            <div id="panDiv" style="position:absolute;top:0px;left:0px; width:480px; height:480px"></div>
+            <div id="markerDiv" style="position:relative;top:0px;left:0px;z-index:1000;display:none;cursor:pointer" onclick="markerClick()"></div>
+            </div>
+
+
+        </td></tr></table>
+        <br />
+        <div id="markerInfo"></div>
+        <br /><br /><br /><br />
+
+
+        <p><a href="http://teammaps.com">Team Maps</a>, July 2013</p>
+
+        <p><a href="http://projects.teammaps.com/Home.aspx">Team Maps Projects</a></p>
+
+        <p>Coding by Robert McMahon. Thanks to <a target="_blank" href="http://www.mapsmaniac.com/">Keir Clarke</a> for assistance during development.</p>
+
+        <p>Licensed under the Apache License <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>.</p>
+
+        <p>You are free to use and modify this code provided that you:<br />
+        (1) Include this notice within the javascript code<br />
+        (2) Display a link to http://teammaps.com on the page that contains the Street View Tour.
+    </p>
+
+
+        <br /><br /><br /><br />
+        <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-5408854154696215";
+            /* Team Maps */
+            google_ad_slot = "8722675958";
+            google_ad_width = 728;
+            google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <br /><br />
+
+    </div>
+    </center>
+
+
+</body>
+</html>

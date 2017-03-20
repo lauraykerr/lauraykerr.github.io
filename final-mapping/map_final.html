@@ -1,0 +1,227 @@
+
+<!-- Data Sources: 
+
+NYC Neighborhood Tabulation Areas: https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-nynta.page
+
+Zillow: https://www.zillow.com/howto/api/neighborhood-boundaries.htm
+
+Pediacities NYC Neighborhoods: http://nycdata.pediacities.com/dataset/pediacities-nyc-neighborhoods -->
+
+<!DOCTYPE html>
+<head>
+    
+    <title> Moves Data </title>
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <link rel="stylesheet" type="text/css" href="map_final.css">
+    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet'>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+</head>
+
+<body>
+    
+    <div id="map"></div>
+    
+    <div class="buttons">
+      <button onclick="censusClick()" class="census"><div></div>NYC Official</button><br/>
+       <button onclick="zillowClick()" class="zillow"><div></div>Zillow</button><br/>
+        <button onclick="pediaClick()" class="pedia"><div></div>Other</button><br/>
+    </div>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.0.2/leaflet-pip.js'></script>
+    <script>
+    // BaseMap
+   
+    var center = [40.694428,-73.921286];
+    var map = L.map('map').setView(center, 13);
+    var layer = L.tileLayer('https://api.mapbox.com/styles/v1/lkerry/cj0hmbgj8004n2suldolv5038/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGtlcnJ5IiwiYSI6ImNpejRqcWc0MTA1enMycW44YjdvZjBnZ3kifQ.40DluVDUEsB6fY-J2RbRNg');
+    map.addLayer(layer);
+  
+    var buttonOn = true;
+    var layers = [];
+  
+    
+    //highlightMatch();
+
+
+    var censusLayer = L.geoJson(null, {
+      style: censusStyle,
+      onEachFeature: onEachFeatureCensus
+    });
+
+     var zillowLayer = L.geoJson(null, {
+      style: zillowStyle
+      //onEachFeature: onEachFeatureZillow
+    });
+
+
+   var pediaLayer = L.geoJson(null, {
+      style: pediaStyle,
+      onEachFeature: onEachFeaturePedia
+    });
+
+
+   function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 1,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.4
+    });
+
+  var popup = new L.Popup({
+     autoPan: false,
+      keepInView: true,
+      //WHATEVER YOU LIKE
+   }).setContent("NEIGHBORHOOD NAME");
+
+   var bounds = layer.getBounds();
+   // Get center of bounds
+   var center = bounds.getCenter();
+
+   popup.setLatLng(center);
+
+   //BIND POPUP TO LAYER
+   layer.bindPopup(popup);
+   layer.openPopup();
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+}
+
+
+function resetHighlightCensus(e) {
+    nyc_2010census.resetStyle(e.target);
+}
+
+function resetHighlightZillow(e) {
+    zillow.resetStyle(e.target);
+}
+
+function resetHighlightPedia(e) {
+    pediacities.resetStyle(e.target);
+}
+
+
+function onEachFeatureCensus(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlightCensus
+    });
+}
+
+function onEachFeatureZillow(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlightZillow
+    });
+}
+
+function onEachFeaturePedia(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlightPedia
+    });
+}
+
+
+
+function highlightMatch(e) {
+     
+      var match = leafletPip.pointInLayer(
+            // the clicked point
+            e.target,
+            // this layer
+            nyc_2010census,
+            // whether to stop at first match
+            false);
+        if (match.length) {
+            for (var i = 0; i < match.length; i++) { 
+              match[i].layer.setStyle({ 
+                weight: 1,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7})  
+            }
+        }
+   
+}
+
+  
+  function censusStyle(feature) {
+    return {
+          color: "#56a8ce",
+          weight: 1.5,
+          fillOpacity: 0,
+    };
+}
+
+function zillowStyle(feature) {
+    return {
+          color: "#cde043",
+          weight: 1.5,
+          fillOpacity: 0,
+    };
+}
+
+function pediaStyle(feature) {
+    return {
+          color: "#46e2a9",
+          weight: 1.5,
+          fillOpacity: 0,
+    };
+}
+
+
+    function censusClick() {
+      if (map.hasLayer(censusLayer)) {
+         map.removeLayer(censusLayer);
+         buttonOn = false;
+      }
+      else {
+        map.addLayer(censusLayer);
+        buttonOn = true;
+      }
+    }
+
+    function zillowClick() {
+       if (map.hasLayer(zillowLayer)) {
+         map.removeLayer(zillowLayer);
+      }
+      else {
+        map.addLayer(zillowLayer);
+      }
+    }
+
+     function pediaClick() {
+       if (map.hasLayer(pediaLayer)) {
+         map.removeLayer(pediaLayer);
+      }
+      else {
+        map.addLayer(pediaLayer);
+      }
+    }
+
+
+    var nyc_2010census = omnivore.geojson('data/nyc_2010census.geojson', null, censusLayer);
+    map.addLayer(nyc_2010census);
+    
+    var zillow = omnivore.geojson('data/ny_zillow.geojson', null, zillowLayer);
+    map.addLayer(zillow);
+
+    var pediacities = omnivore.geojson('data/nyc_pediacities.geojson', null, pediaLayer);
+    map.addLayer(pediacities);
+
+
+    
+
+        
+
+   
+    </script>
+
+    <script src="jquery-1.11.3.min.js"></script>
+</body>
+
+</html>
