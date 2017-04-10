@@ -8,7 +8,7 @@ $(document).ready(function() {
 		lonLat = lonLatList[i];
 		var imgDiv;
 		var img = $("<img class='sat-image' id=" + i + ">");
-		img.attr('src', "https://maps.googleapis.com/maps/api/staticmap?center="+lonLat+"&zoom=17&size=600x600&maptype=satellite");
+		img.attr('src', "https://maps.googleapis.com/maps/api/staticmap?center="+lonLat+"&zoom=17&size=600x600&maptype=satellite&key=AIzaSyAr2DlgXOvy7KgPHAlPzioBYYMF7NsFdRA");
 		img.appendTo("div.maps");
 		
 	}
