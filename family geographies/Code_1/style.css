@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	padding: 50px;
+	font-family: 'Cormorant Garamond', serif;
+
+}
+
+.description {
+	float: left;
+	margin-top: 75px;
+	width: 350px;
+}
+
+.description p {
+	padding: 0 6px;
+	line-height: 140%;
+	margin: 12px 0 0 0;
+}
+
+div.next {
+	position: absolute;
+	width: 350px;
+	height: 25px;
+	top: 565px;
+	text-align: center;
+}
+
+.thetitle h2 {
+	text-align: center;
+	margin: 0 auto;
+	top: 20px;
+	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.tree {
+	margin-top: 10px;
+	margin-left: 75px;
+	margin-right: 75px;
+	float: left;
+	width: 400px;
+}
+
+.dates {
+	position: relative;
+	top: -20px;
+	text-align: center;
+	font-size: 18px;
+	background-color: rgb(240,240,240);
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 18px 0 15px 0;
+} 
+
+.na, .eu, .other {
+	color: rgb(80,80,80);
+	position: relative;
+	top: 70px;
+	left: 45px;
+	font-size: 12px;
+	float: left;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.na {
+	left: 25px;
+	/*45px*/
+}
+
+.eu {
+	left: 75px;
+	/*115*/
+}
+
+.other {
+	left: 163px;
+	/*205*/
+}
+
+.slider {
+	position: relative;
+	top: 475px;
+	text-align: center;
+	left: 70px;
+}
+
+.slider:hover {
+	cursor: pointer;
+}
+
+.complete {
+	position: relative;
+	top: 450px;
+	width: 50px;
+}
+
+.reset {
+	position: relative;
+	top: 428px;
+	left: 75px;
+	width: 50px;
+
+}
+
+button {
+	border: 1px solid rgb(255,140,120);
+	color: #444;
+	background-color: white;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 12px;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: rgb(255,140,120);
+}
