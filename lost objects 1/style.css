@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000026;
+	font-family: 'Karla', sans-serif;
+
+	padding: 30px 40px;
+
+
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+h1 {
+	color: #333;
+	text-align: center;
+	background-color: white;
+	width: 40%;
+	margin: 0 auto;
+	border: 2px solid black;
+	padding: 2px;
+}
+
+.description {
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	margin-top: 40px;
+	line-height: 175%;
+}
+
+.description:hover {
+	cursor: pointer;
+}
+
+.images {
+	display: none;
+}
+
+.bag {
+	width: 25%;
+	float: left;
+	padding-left: 10%;
+	opacity: .2;
+}
+
+.notebook {
+	width: 30%;
+	float: left;
+	padding-top: 75px;
+	padding-left: 10%;
+	opacity: .2;
+}
+
+.wallet {
+	width: 35%;
+	float: left;
+	padding-top: 100px;
+	padding-left: 10%;
+	opacity: .2;
+}
+
+.stories {
+	color: black;
+	background-color: white;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding: 15px 20px;
+	border: 2px solid black;
+	display: none;
+	line-height: 125%;
+	font-size: 17px;
+	opacity: .7;
+}
+
