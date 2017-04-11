@@ -120,7 +120,7 @@ function bfs() {
     console.log(path[i].label);
   }
   
-  var resultText = document.createP(result);
+  var resultText = createP(result);
   resultText.className = "results";
   
 
