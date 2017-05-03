@@ -1,0 +1,95 @@
+{
+    "songs": [{
+            "title": "Cross Road Blues",
+            "artists": [
+                "Robert Johnson",
+                "Cream",
+                "Eric Clapton",
+                "John Mayer"
+            ]
+        },
+        {
+            "title": "Stop Breaking Down Blues",
+            "artists": [
+                "Robert Johnson",
+                "The Rolling Stones",
+                "The White Stripes"
+            ]
+        },
+        {
+            "title": "Rock and Roll Music",
+            "artists": [
+                "Chuck Berry",
+                "The Beatles",
+                "The Beach Boys",
+                "REO Speedwagon",
+                "Humble Pie",
+                "Bryan Adams"
+            ]
+        },
+        {
+            "title": "I Got a Woman",
+            "artists": [
+                "Ray Charles",
+                "Elvis Presley",
+                "The Beatles",
+                "Toots & the Maytals"
+            ]
+        },
+        {
+            "title": "Gimme Shelter",
+            "artists": [
+                "The Rolling Stones",
+                "Patti Smith",
+                "Stereophonics",
+                "Goo Goo Dolls"
+            ]
+        },
+        {
+            "title": "Eleanor Rigby",
+            "artists": [
+                "The Beatles",
+                "Ray Charles",
+                "The Fray",
+                "Aretha Franklin",
+                "Four Tops",
+                "Vince Guaraldi",
+                "Sarah Vaughan",
+                "The Supremes",
+                "John Denver",
+                "Joan Baez",
+                "Johnny Mathis",
+                "Count Basie",
+                "Alice Cooper",
+                "Paul Anka"
+            ]
+        },
+        {
+            "title": "You Ain't Goin' Nowhere",
+            "artists": [
+                "Bob Dylan",
+                "The Band",
+                "Joan Baez",
+                "The Byrds",
+                "Earl Scruggs",
+                "Brett Dennen",
+                "Counting Crows",
+                "Garth Brooks"
+            ]
+        },
+        {
+            "title": "The Wind Cries Mary",
+            "artists": [
+                "Jimi Hendrix",
+                "John Mayer"
+            ]
+        },
+        {
+            "title": "All Along the Watchtower",
+            "artists": [
+                "Bob Dylan",
+                "Jimi Hendrix"
+            ]
+        }
+    ]
+}

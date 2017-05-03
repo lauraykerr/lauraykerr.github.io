@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Six Degrees of Robert Johnson</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <script src="graph.js"></script>
+    <script src="node.js"></script>
+    <script src="classes/NodeViz.js"></script>
+    <script src="classes/Edge.js"></script>
+    <script src="sketch.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+
+    <!-- awesomeplete widget: http://leaverou.github.io/awesomplete/ -->
+    <link rel="stylesheet" href="awesomplete/awesomplete.css" /> 
+    <script src="awesomplete/awesomplete.js" async></script>
+
+</head>
+
+<body>
+  <header>
+  <h1>Six Degrees of Robert Johnson</h1>
+  <ul class="menu">
+    <li id="about">About</li>
+    <li id="code"><a href="">Code</a></li>
+  </ul>
+  </header>
+  <p class="pick">
+    Pick a musician: <span id="artistlist"></span>
+    <datalist id="myList"></datalist>
+  </p>
+  <div id="results"></div>
+
+
+
+</body>
+
+</html>
