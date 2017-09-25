@@ -1,7 +1,7 @@
 var query;
 var hexCode;
 var userInput;
-var url = "https://www.colourlovers.com/api/colors/top?format=json&keywords=";
+var url = "http://www.colourlovers.com/api/colors/top?format=json&keywords=";
 
 
 
