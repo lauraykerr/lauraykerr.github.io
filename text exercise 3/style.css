@@ -1,0 +1,21 @@
+body {
+	text-align: center;
+}
+
+.userInput {
+	text-align: center;
+	font-size: 120px;
+	border: none;
+	margin-top: 20%;
+	/*margin-left: 10%;*/
+	font-weight: bold;
+	width: 100%;
+}
+
+.userInput:focus {
+	outline: none;
+}
+
+input::placeholder {
+  color: #ddd;
+}
