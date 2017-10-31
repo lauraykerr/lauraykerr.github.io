@@ -1,0 +1,32 @@
+body {
+    padding: 40px;
+    font-family:  Arial, sans-serif;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-color: pink;
+    color: black;
+    border: none;
+  }
+
+  .note {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    margin: 15px;
+  }
+
+  .score {
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+  }
